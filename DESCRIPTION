@@ -1,9 +1,10 @@
 Package: reportR
 Type: Package
-Title: What the package does (short line)
+Title: Miscellaneous tools to stylize reports
 Version: 1.0
 Date: 2016-05-25
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Erica Wozniak
+Maintainer: Erica Wozniak <ewozniak@mcw.edu>
+Description: This package consists of of small miscellaneous functions to streamline my process of compiling attractive and consistently formatted knitr reports.
+Imports: ggplot2, grid, RColorBrewer
+License: GPL-2
