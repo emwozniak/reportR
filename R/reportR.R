@@ -59,6 +59,23 @@ theme_ew <- function (base_size = 20,
 # CSS style for knitr reporting #
 #################################
 
+sink_css <-  function(dir         = getwd(), 
+                      font_family = "Palatino Linotype", 
+                      font_size   = 11, 
+                      max_width   = 45)
+  font_family <- "Garamond"
+font_size <- 12
+max_width <- 45
+{
+  cat(
+    "body  {",
+    paste("  font-family: ", font_family, ";", sep = ""),
+    paste("  font-size: ", as.character(font_size), "pt;", sep = ""),
+    paste("  max-width: ", as.character(max_width), "em;", sep = ""),
+    sep="\n")
+}
+
+
 sink("style.css")
 cat(
   "body  {",
@@ -226,3 +243,27 @@ cat(
   "}",
   sep="\n")
 sink()
+
+################
+# knitr header #
+################
+
+sink_header <- function(title, author, date = "`r format(Sys.Date(), '%d %B %Y')`") {
+  cat(
+    "---",
+    paste("title:", noquote(dQuote(title)), sep = " "),
+    paste("author:", noquote(dQuote(author)), sep = " "),
+    paste("date:", noquote(dQuote(date)), sep = " "),
+    "output:",
+    "  html_document:",
+    "    css: style.css",
+    "    toc: yes",
+    "---",
+      
+    "***",
+    "&nbsp;",
+    sep = "\n"
+    )
+  }
+
+
