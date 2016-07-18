@@ -58,10 +58,6 @@ theme_ew <- function (base_size = 20,
 #################################
 # CSS style for knitr reporting #
 #################################
-font_family <- "Garamond"
-font_size <- 12
-max_width <- 45
-
 sink_css <-  function(dir         = getwd(), 
                       font_body   = "Palatino Linotype", 
                       font_table  = "Palatino Linotype",
