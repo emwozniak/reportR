@@ -37,14 +37,15 @@ Returns a file called style.css to the working directory or other specified dire
 
 \author{Erica Wozniak}
 
+\note{ 
+This function has no required inputs. <br>
+Only the base font size can be altered at present. Other font sizes in the document are calculated relative to the specified size for the document body.
+}
+
 \seealso{
   \code{\link{reportR}}
 }
 
-\notes{ 
-This function has no required inputs. <br>
-Only the base font size can be altered at present. Other font sizes in the document are calculated relative to the specified size for the document body.
-}
 
 \examples{
 # Minimal required inputs

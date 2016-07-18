@@ -26,6 +26,3 @@ Maintainer: \packageMaintainer{reportR}
     \code{\link{print_header}}
     \code{\link{sink_css}}
   }
-\examples{
-
-}

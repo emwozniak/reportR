@@ -9,10 +9,6 @@
 print_header(title, author, date)
 }
 
-\notes{
-This function assumes the document will be styled with "style.css"."
-}
-
 \arguments{
   \item{title}{
   Character string for document title. Required.
@@ -31,6 +27,10 @@ Returns a knitr header printed to the console.
 }
 
 \author{Erica Wozniak}
+
+\note{
+This function assumes the document will be styled with "style.css"."
+}
 
 \seealso{
   \code{\link{reportR}}

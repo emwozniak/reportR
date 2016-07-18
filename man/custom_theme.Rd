@@ -34,6 +34,8 @@ At present, an extra line space is needed after the plot title and before the x-
 }
 
 \examples{
+library(ggplot2)
+
 # Custom theme with defaults
 ggplot(dat = cars, aes(x = speed, y = dist)) + 
   geom_point() + 
