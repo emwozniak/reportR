@@ -2,4 +2,6 @@ import(ggplot2)
 import(grid)
 import(RColorBrewer)
 
-#Export created functions below
+export(theme_ew)
+export(sink_css)
+export(sink_header)

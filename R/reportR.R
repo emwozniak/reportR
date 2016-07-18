@@ -2,12 +2,12 @@
 # Customized ggplot2 theme #
 ############################
 
-theme_ew <- function (base_size = 20, 
-                      base_family = "serif") {
+custom_theme <- function (base_size = 18, 
+                          base_family = "serif") {
   theme_grey(base_size = 18, base_family = base_family) %+replace% 
     theme(
       # Serif font, larger text, more whitespace between axes and labels
-      text = element_text(family = "serif", 
+      text = element_text(family = base_family, 
                           face   = "plain", 
                           colour = "black", 
                           size   = base_size,
@@ -68,7 +68,7 @@ sink_css <-  function(dir         = getwd(),
   sink(paste(dir, "/style.css", sep = ""))
   cat(
           "body  {",
-    paste("  font-family: ", font_family, ";", sep = ""),
+    paste("  font-family: ", font_body, ";", sep = ""),
     paste("  font-size: ", as.character(font_size), "pt;", sep = ""),
           "  background-color: white;",
           "  padding-top: 1em;",
@@ -90,7 +90,7 @@ sink_css <-  function(dir         = getwd(),
           "}",
           " ",
           "td, tr{",
-    paste("  font: ", as.character(ceiling(font_size*0.91)), "pt Palatino Linotype;", sep=""),
+    paste("  font: ", as.character(ceiling(font_size*0.91)), "pt ", font_table, ";", sep=""),
           "  padding: 0px;",
           "  margin: 0px;",
           "}",
@@ -238,7 +238,7 @@ sink_css <-  function(dir         = getwd(),
 # knitr header #
 ################
 
-sink_header <- function(title, author, date = "`r format(Sys.Date(), '%d %B %Y')`") {
+print_header <- function(title, author, date = "`r format(Sys.Date(), '%d %B %Y')`") {
   cat(
     "---",
     paste("title:", noquote(dQuote(title)), sep = " "),

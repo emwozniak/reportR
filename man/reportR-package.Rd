@@ -13,23 +13,19 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{reportR}
 \packageIndices{reportR}
-~~ An overview of how to use the package, including the most important functions ~~
+This package consists of of small miscellaneous functions to streamline the process of compiling attractive and consistently formatted knitr reports, including a ggplot2 theme (\code{\link{custom_theme}}), a CSS file to sylize knitr documents (\code{\link{sink_css}}), and a function to stylize the headers of knitr documents \code{\link{print_header}}.
 }
 \author{
 \packageAuthor{reportR}
 
 Maintainer: \packageMaintainer{reportR}
 }
-\references{
-~~ Literature or other references for background information ~~
-}
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R ~~
-~~ documentation directory ~~
-\keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
+\keyword{ knitr, report, css, ggplot2 }
+  \seealso{
+    \code{\link{custom_theme}}
+    \code{\link{print_header}}
+    \code{\link{sink_css}}
+  }
 \examples{
-~~ simple examples of the most important functions ~~
+
 }
